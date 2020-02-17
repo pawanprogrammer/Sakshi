@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00BCD4"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/noUsersText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No users found!"
+        android:visibility="gone" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Just Learn ChatBox"
+        android:padding="10dp"
+        android:fontFamily="serif-monospace"
+        android:textSize="20sp"
+        android:textColor="#FFF"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"/>
+    <ListView
+        android:id="@+id/usersList"
+        android:layout_width="match_parent"
+        android:listSelector="#FFFFFF"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+

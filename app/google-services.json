@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "510683733872",
+    "firebase_url": "https://onlinelearning-eee65.firebaseio.com",
+    "project_id": "onlinelearning-eee65",
+    "storage_bucket": "onlinelearning-eee65.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:510683733872:android:10ac86c1a7cd05ca",
+        "android_client_info": {
+          "package_name": "com.cetpainfotech.onlinelearning"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "510683733872-6onj8e4ot4vbffm817t0u9jfmd50s3kk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cetpainfotech.onlinelearning",
+            "certificate_hash": "cec3f4b3ce9560b6a8ed377bf31d71b2af4b0988"
+          }
+        },
+        {
+          "client_id": "510683733872-ughkg12ha679v45hpa7bp7hhc08gnv33.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5FWhWNxNIjumtN685smjUn17jka9PkkA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "510683733872-ughkg12ha679v45hpa7bp7hhc08gnv33.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

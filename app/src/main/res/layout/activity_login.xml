@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00BCD4"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="30dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:text="Just Learn"
+        android:textSize="30dp"
+        android:textColor="#FFF"
+        android:fontFamily="serif-monospace"/>
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#fff"
+        android:background="@drawable/etback"
+        android:hint="Username"
+        android:fontFamily="serif"
+        android:drawablePadding="10dp"
+        android:drawableLeft="@drawable/ic_account_circle_black_24dp"
+        android:textColorHint="#03A9F4"
+        android:inputType="text"
+        android:maxLines="1"
+        android:elevation="5dp"
+        android:padding="10dp" />
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#fff"
+        android:drawablePadding="10dp"
+        android:drawableLeft="@drawable/ic_lock_black_24dp"
+        android:background="@drawable/etback"
+        android:hint="Password"
+        android:fontFamily="serif"
+        android:textColorHint="#03A9F4"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:layout_marginTop="5dp"
+        android:elevation="5dp"
+        android:padding="10dp" />
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:elevation="5dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btnback"
+        android:backgroundTint="#2196F3"
+        android:text="Login"
+        android:fontFamily="serif"
+        android:textColor="#fff" />
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:fontFamily="serif"
+        android:text="Create New Account"
+        android:textSize="20dp" />
+</LinearLayout>
