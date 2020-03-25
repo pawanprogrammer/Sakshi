@@ -32,6 +32,7 @@ public class ChatActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
+        getSupportActionBar().setTitle("ChatBox");
         layout = (LinearLayout) findViewById(R.id.layout1);
         layout_2 = (RelativeLayout)findViewById(R.id.layout2);
         sendButton = (ImageView)findViewById(R.id.sendButton);
@@ -96,7 +97,9 @@ public class ChatActivity extends AppCompatActivity {
             lp2.gravity = Gravity.RIGHT;
             //textView.setBackgroundResource(R.drawable.bubble_out);
         }
+        textView.setTextColor(getResources().getColor(R.color.white_smoke));
         textView.setLayoutParams(lp2);
+
         layout.addView(textView);
         scrollView.fullScroll(View.FOCUS_DOWN);
     }

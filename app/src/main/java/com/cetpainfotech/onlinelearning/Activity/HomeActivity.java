@@ -29,7 +29,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     ViewPager pager;
     ViewPagerAdapter adapter;
     SlidingTabLayout tabs;
-    CharSequence Titles[] = {"Android", "Java", "Php", "Ios", "Iot", "Python", "Dotnet","Notes"};
+    CharSequence Titles[] = {"Android", "Java Tech", "Php Web", "Ios Apps", "Iot Tech", "Python", "Dotnet","Notes No"};
     int Numboftabs = 8;
 
     @Override

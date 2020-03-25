@@ -27,7 +27,7 @@
             android:screenOrientation="portrait"></activity>
         <activity
             android:name=".Activity.HomeActivity"
-            android:label="Cetpa Learning"
+            android:label="Just Learning"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
 
