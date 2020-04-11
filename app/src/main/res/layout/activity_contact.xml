@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".Activity.ContactActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etname"
+        android:hint="Name"
+        android:textColorHint="#000"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="50dp"></EditText>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etemail"
+        android:hint="Email Id"
+        android:textColorHint="#000"
+        app:layout_constraintTop_toBottomOf="@+id/etname"
+        android:layout_marginTop="5dp"></EditText>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etmobile"
+        android:hint="Mobile No."
+        android:textColorHint="#000"
+        app:layout_constraintTop_toBottomOf="@+id/etemail"
+        android:layout_marginTop="5dp"></EditText>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etmsg"
+        android:hint="Write Your Message"
+        android:textColorHint="#000"
+        app:layout_constraintTop_toBottomOf="@+id/etmobile"
+        android:layout_marginTop="5dp"></EditText>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/btn_submit"
+        android:textColor="#fff"
+        android:background="#00BCD4"
+        app:layout_constraintTop_toBottomOf="@+id/etmsg"
+        android:layout_marginTop="50dp"></Button>
+</android.support.constraint.ConstraintLayout>

@@ -2,6 +2,7 @@ package com.cetpainfotech.onlinelearning.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -13,8 +14,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
+import com.cetpainfotech.onlinelearning.Authentication.LoginActivity;
 import com.cetpainfotech.onlinelearning.Chat.UserActivity;
 import com.cetpainfotech.onlinelearning.Fragment.AndroidFragment;
 import com.cetpainfotech.onlinelearning.R;
@@ -31,16 +34,23 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     SlidingTabLayout tabs;
     CharSequence Titles[] = {"Android", "Java Tech", "Php Web", "Ios Apps", "Iot Tech", "Python", "Dotnet","Notes No"};
     int Numboftabs = 8;
-
+    FloatingActionButton fab;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//to hide the status bar
+        //to hide the status bar
         /*requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);*/
 
         setContentView(R.layout.activity_home);
-
+        fab = findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, UserActivity.class);
+                startActivity(intent);
+            }
+        });
 
         // Creating The ViewPagerAdapter and Passing Fragment Manager, Titles fot the Tabs and Number Of Tabs.
         adapter = new ViewPagerAdapter(getSupportFragmentManager(), Titles, Numboftabs);
@@ -134,16 +144,27 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.nav_aboutus:
-                Toast.makeText(getApplicationContext(), "htdfhtfhf", Toast.LENGTH_SHORT).show();
+                Intent about = new Intent(HomeActivity.this, AboutActivity.class);
+                startActivity(about);
                 break;
             case R.id.nav_feedback:
+                Intent feedback = new Intent(HomeActivity.this, FeedbackActivity.class);
+                startActivity(feedback);
                 break;
             case R.id.nav_share:
                 shareAppD();
                 break;
-            case R.id.nav_contactus:
-                break;
 
+            case R.id.nav_contactus:
+                Intent contact = new Intent(HomeActivity.this, ContactActivity.class);
+                startActivity(contact);
+                break;
+            case R.id.nav_logout:
+                Toast.makeText(this, "Logout Success", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
+                startActivity(intent);
+                finish();
+                break;
 
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

@@ -18,6 +18,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.cetpainfotech.onlinelearning.Activity.HomeActivity;
+import com.cetpainfotech.onlinelearning.Activity.SplashActivity;
 import com.cetpainfotech.onlinelearning.R;
 import com.firebase.client.Firebase;
 
@@ -101,8 +102,9 @@ public class RegisterActivity extends AppCompatActivity {
                                         handler.postDelayed(new Runnable() {
                                             @Override
                                             public void run() {
-                                                Intent intent=new Intent(RegisterActivity.this, HomeActivity.class);
+                                                Intent intent=new Intent(RegisterActivity.this, SplashActivity.class);
                                                 startActivity(intent);
+                                                finish();
                                             }
                                         }, 500);
 //          check if user is already present then make toast

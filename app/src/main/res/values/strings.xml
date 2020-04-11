@@ -19,4 +19,5 @@
     <string name="slide_4_title">Online Notes</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="description">This app is designed for the students to help to make a proper note. It covers almost all the topics of computer science with the videos ,pdfs  etc. Topics are included keeping the syllabus in mind . This app will be very useful for the students willing to secure good grade ..students can easily open the topic and can acquire the knowledge anywhere  and everywhere.</string>
 </resources>

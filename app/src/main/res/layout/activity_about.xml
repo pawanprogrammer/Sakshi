@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.AboutActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="About Us"
+        android:id="@+id/aboutus"
+        android:textAllCaps="true"
+        android:textColor="#000"
+        android:textSize="24sp"
+        android:padding="5dp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        ></TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/aboutus"
+        android:text="@string/description"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:padding="5dp"
+        android:layout_marginTop="40dp"
+        android:id="@+id/description"
+        android:layout_marginLeft="20dp"
+        ></TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/description"
+        android:text="Developer Name: Sakshi Gandhi\n\nDeveloper Email: Sakshigandhi8219@gmail.com"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:padding="5dp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        ></TextView>
+
+
+</android.support.constraint.ConstraintLayout>

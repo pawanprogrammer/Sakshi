@@ -17,6 +17,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.cetpainfotech.onlinelearning.Activity.HomeActivity;
+import com.cetpainfotech.onlinelearning.Activity.SplashActivity;
 import com.cetpainfotech.onlinelearning.Chat.UserActivity;
 import com.cetpainfotech.onlinelearning.Chat.UserDetails;
 import com.cetpainfotech.onlinelearning.R;
@@ -84,7 +85,8 @@ public class LoginActivity extends AppCompatActivity {
                                     else if (obj.getJSONObject(user).getString("password").equals(pass)) {
                                         UserDetails.username = user;
                                         UserDetails.password = pass;
-                                        startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+                                        startActivity(new Intent(LoginActivity.this, SplashActivity.class));
+                                        finish();
                                     }
                                     else {
                                         Toast.makeText(LoginActivity.this, "incorrect password", Toast.LENGTH_LONG).show();
