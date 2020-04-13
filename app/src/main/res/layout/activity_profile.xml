@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    tools:context=".Activity.ProfileActivity">
+
+
+    <!--<ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/iv_profile"
+        android:src="@drawable/profilepic"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"></ImageView>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_profile"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:text="Add Your Photo"
+        android:id="@+id/btn_addphoto"
+        android:background="@drawable/btnback"
+        ></Button>-->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Your Name"
+        android:id="@+id/etname"
+        android:layout_marginTop="50dp"
+        android:textColorHint="#000"
+        app:layout_constraintTop_toTopOf="parent"></EditText>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Your Email Id"
+        android:id="@+id/etemail"
+        android:layout_marginTop="10dp"
+        android:textColorHint="#000"
+        app:layout_constraintTop_toBottomOf="@+id/etname"></EditText>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/btn_save"
+        android:background="@drawable/btnback"
+        app:layout_constraintTop_toBottomOf="@+id/etemail"
+        android:layout_marginTop="30dp"></Button>
+</android.support.constraint.ConstraintLayout>

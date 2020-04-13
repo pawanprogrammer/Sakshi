@@ -1,6 +1,7 @@
 package com.cetpainfotech.onlinelearning.Activity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -15,10 +16,13 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.cetpainfotech.onlinelearning.Authentication.LoginActivity;
 import com.cetpainfotech.onlinelearning.Chat.UserActivity;
+import com.cetpainfotech.onlinelearning.Chat.UserDetails;
 import com.cetpainfotech.onlinelearning.Fragment.AndroidFragment;
 import com.cetpainfotech.onlinelearning.R;
 import com.cetpainfotech.onlinelearning.Helper.SlidingTabLayout;
@@ -88,8 +92,24 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
 
+        navigationView.setNavigationItemSelectedListener(this);
+        View headerview=navigationView.getHeaderView(0);
+        ImageView iv_profile = headerview.findViewById(R.id.edit);
+        iv_profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, ProfileActivity.class);
+                startActivity(intent);
+            }
+        });
+        TextView name = headerview.findViewById(R.id.nav_name);
+        TextView email = headerview.findViewById(R.id.nav_email);
+        SharedPreferences sp = getSharedPreferences("profile", 0);
+        String sname = sp.getString("name", UserDetails.username);
+        String semail = sp.getString("email", null);
+        name.setText(sname);
+        email.setText(semail);
     }
 
     @Override
