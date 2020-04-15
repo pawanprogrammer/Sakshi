@@ -17,12 +17,12 @@ import com.cetpainfotech.onlinelearning.R;
  * Created by Dell on 22-Jan-18.
  */
 
-public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.MyNoteHolder>{
+public class InterviewAdapter extends RecyclerView.Adapter<InterviewAdapter.MyNoteHolder>{
     Context context;
     private String[] name;
     private String[] url;
 
-    public NotesAdapter(Context context, String[] name, String[] url) {
+    public InterviewAdapter(Context context, String[] name, String[] url) {
         this.context = context;
         this.name = name;
         this.url = url;
@@ -30,15 +30,15 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.MyNoteHolder
 
     @Override
     public MyNoteHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view=LayoutInflater.from(context).inflate(R.layout.noteslist,parent,false);
+        View view=LayoutInflater.from(context).inflate(R.layout.interviewlist,parent,false);
         return new MyNoteHolder(view);
     }
 
     @Override
     public void onBindViewHolder(MyNoteHolder holder, final int position) {
         holder.noteName.setText(name[position]);
-        //holder.noteUrl.setText(url[position]);
-        holder.book_layout.setOnClickListener(new View.OnClickListener() {
+        holder.noteUrl.setText(url[position]);
+       /* holder.book_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent  intent=new Intent();
@@ -47,7 +47,7 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.MyNoteHolder
                 intent.setData(Uri.parse(url[position]));
                 context.startActivity(intent);
             }
-        });
+        });*/
     }
 
     @Override
@@ -62,7 +62,7 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.MyNoteHolder
             super(itemView);
             noteName=itemView.findViewById(R.id.noteName);
             noteUrl=itemView.findViewById(R.id.noteUrl);
-            book_layout = itemView.findViewById(R.id.book_layout);
+            //book_layout = itemView.findViewById(R.id.book_layout);
         }
     }
 }

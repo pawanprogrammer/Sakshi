@@ -36,8 +36,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     ViewPager pager;
     ViewPagerAdapter adapter;
     SlidingTabLayout tabs;
-    CharSequence Titles[] = {"Android", "Java Tech", "Php Web", "Ios Apps", "Iot Tech", "Python", "Dotnet","Notes No"};
-    int Numboftabs = 8;
+    CharSequence Titles[] = {"Android", "Java Tech", "Php Web", "Ios Apps", "Iot Tech", "Python", "Dotnet","Notes No", "InterView Ques"};
+    int Numboftabs = 9;
     FloatingActionButton fab;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

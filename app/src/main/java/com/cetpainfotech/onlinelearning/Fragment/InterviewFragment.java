@@ -1,11 +1,9 @@
 package com.cetpainfotech.onlinelearning.Fragment;
 
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -22,15 +20,16 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.cetpainfotech.onlinelearning.Adapter.InterviewAdapter;
 import com.cetpainfotech.onlinelearning.Adapter.NotesAdapter;
 import com.cetpainfotech.onlinelearning.Model.NotesJson;
 import com.cetpainfotech.onlinelearning.R;
 
 
-public class NotesFragment extends Fragment {
+public class InterviewFragment extends Fragment {
     ProgressBar progressBar;
     SwipeRefreshLayout swipeRefreshLayout;
-    String url="http://searchkero.com/sakshi/notes.json";
+    String url="http://searchkero.com/sakshi/interview.json";
     RecyclerView recyclerView;
 
 
@@ -91,7 +90,7 @@ public class NotesFragment extends Fragment {
                 NotesJson notesJson=new NotesJson(response);
                 notesJson.notejson();
 
-                NotesAdapter adapter=new NotesAdapter(getActivity(),NotesJson.name,NotesJson.url);
+                InterviewAdapter adapter=new InterviewAdapter(getActivity(),NotesJson.name,NotesJson.url);
                 recyclerView.setAdapter(adapter);
 
                 progressBar.setVisibility(View.GONE);

@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.cetpainfotech.onlinelearning.Fragment.AndroidFragment;
 import com.cetpainfotech.onlinelearning.Fragment.DotnetFragment;
+import com.cetpainfotech.onlinelearning.Fragment.InterviewFragment;
 import com.cetpainfotech.onlinelearning.Fragment.IosFragment;
 import com.cetpainfotech.onlinelearning.Fragment.IotFragment;
 import com.cetpainfotech.onlinelearning.Fragment.JavaFragment;
@@ -62,8 +63,12 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
             DotnetFragment tab=new DotnetFragment();
             return tab;
         }
-        else {
+        else if (position == 7){
             NotesFragment notesFragment=new NotesFragment();
+            return notesFragment;
+        }
+        else {
+            InterviewFragment notesFragment=new InterviewFragment();
             return notesFragment;
         }
         /*else if (position==3){
